@@ -1,0 +1,77 @@
+/** Entry Button Styles **/
+
+button, label {
+	transition: all 0.5s ease;
+}
+
+// Floor and utility buttons
+.floor-entry, .util-btns{ 
+	.btn-wrap {
+		padding: 15px;
+	}
+	button {
+		border-radius: 60px;
+		background-color: transparent;
+		border: solid 2px $primary-color;
+		height: 120px;
+		width: 120px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 15px 0;
+		display: block;
+		@include font-size(4.2);
+		text-transform: uppercase;
+		&.active {
+			border-color: $white;
+			background-color: $secondary-color;	
+			&.util-emergency {
+				background-color: #9f1821;
+			}
+		}
+	}
+}
+.util-btns {
+	text-align: center;
+	margin-bottom: 15px;
+	li {
+		display: inline-block;
+	}
+	button {
+		height: 100px;
+		width: 100px;
+		@include font-size(3.4);
+	}
+}
+
+
+/** Media queries **/
+
+// iPad portrait
+@media only screen and (max-width: 780px) {
+	.util-btns li:nth-child(even) {
+		margin: 0 40px;
+	}
+}
+
+// Iteration 2
+// iPad landscape
+@media only screen and (min-width: 780px) {
+	.floor-entry {
+		padding: 0 5%;
+		button {
+			height: 85px;
+			width: 85px;
+		}
+	}
+	.util-btns {
+		@include make-row;
+		li {
+			@include make-md-column(4);
+		}
+		button {
+			height: 75px;
+			width: 75px;
+		}
+
+	}
+}

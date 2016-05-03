@@ -1,0 +1,36 @@
+header: 'Where to?'
+
+subheader: 'Top Picks:'
+
+current_floor_label: 'Current Floor'
+
+floor_entry_label: 'Choose a floor'
+
+
+# Feature location buttons
+feature_btns:
+- floor: "1"
+  message: "Eat. Drink. Lounge. Lenox."
+  image: "http://placehold.it/375x150?text=Restaurant+Placeholder"
+  id: "restaurant"
+- floor: "2"
+  message: "Workout On Your Terms 24/7."
+  image: "http://placehold.it/375x150?text=Gym+Placeholder"
+  id: "gym"
+
+# Floor entry buttons
+floor_btns:
+- id: "submit"
+  text: 'Go'
+
+# Utility buttons: door open/close, emergency
+util_btns:
+- id: "util-door-open"
+  class: "util-door-open"
+  text: '<span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">'
+- id: "util-door-close"
+  class: "util-door-close"
+  text: '<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>'
+- id: "util-emergency"
+  class: "util-emergency"
+  text: '<span class="glyphicon glyphicon-earphone aria-hidden="true"></span>'

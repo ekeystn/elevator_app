@@ -1,0 +1,55 @@
+/** Global Styles **/
+
+/* -- Variables -- */
+
+/*-------------
+  Colors
+--------------*/
+$white: #fff;
+$black: #222;
+$primary-color: #adc1cc;
+$secondary-color: #718696;
+
+/* -- Main Styles -- */
+
+html {
+	height: 100%;
+}
+
+body {
+	background: #1b2f40;
+	background: linear-gradient(to bottom,  #1b2f40 0%,#20384c 39%,#24435c 72%,#284f72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 0;
+	color: $white;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background: $white;
+	background: linear-gradient(to right,  #ffffff 0%,#24435c 81%,#1b2f40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+h1 {
+	@include font-size(6.4);
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+h1 + hr {
+	margin-bottom: 30px;
+	height: 2px;
+}
+
+button, button:focus, button:active {
+	outline: none;
+}

@@ -1,0 +1,82 @@
+<% require 'active_support/all' %>
+<!-- Set data file path and variable -->
+<% data.index.iteration_1.each{|variable, value| instance_variable_set("@base_#{variable}", value)} %>
+
+<div class="container">
+	<h1>
+		<%=@base_header%>
+	</h1>
+	<hr>
+
+	<!-- Floor indicator -->
+	<div class="row floor-indicator">
+		<div class="col-xs-4 col-md-3">
+			<h2><%=@base_current_floor_label%></h2>
+		</div>
+		<div class="col-xs-8 col-md-9">
+			<h2 class="current-floor" id="current-floor">1</h2>
+		</div>
+	</div>
+	<!-- Floor indicator -->
+	
+	<div class="row">
+		<!-- Featured locations -->
+		<div class="col-xs-12 col-md-5">
+			<ul class="row feature-locations list-unstyled" id="feature-locations">
+				<% data.index.iteration_1.feature_btns.each do |f| %>
+					<li class="col-xs-6 col-md-12">
+						<label>
+							<span class="feature-floor">Floor <%= f["floor"] %>:</span>
+							<span><%= f["message"] %></span>
+						</label>
+						<button id="<%= f["id"] %>" value="<%= f["floor"] %>" class="feature">
+							<img class="img-responsive" src="<%= f["image"] %>">
+						</button>
+					</li>
+				<% end %>
+			</ul>
+
+			<!-- Utility buttons -->
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="list-unstyled util-btns" id="util-btns">
+						<% data.index.iteration_1.util_btns.each do |f| %>
+							<li>
+								<button id="entry-<%= f["id"] %>" class="util <%= f["class"] %>" value="<%= f["id"] %>">
+									<%= f["text"] %>
+								</button>
+							</li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+			<!-- /Utility buttons -->
+
+		</div>
+		<!-- /Featured locations -->
+
+
+		<!-- Floor number entry -->
+		<div class="col-xs-12 col-md-7 floor-entry" id="floor-entry">
+			
+			<h2><%=@base_floor_entry_label%></h2>
+
+				<!-- Number pad -->
+				<ul id="number-list" class="row number-list list-unstyled">
+					<% (1..43).each do |f| %>
+						<li class="col-xs-3 btn-wrap">
+							<button id="entry-<%= f %>" value="<%= f %>">
+								<%= f %>
+							</button>
+						</li>
+					<% end %>
+				</ul>
+				<!--/ Number pad -->
+
+		</div>
+		<!-- /Floor number entry -->
+
+	</div>
+
+</div>
+

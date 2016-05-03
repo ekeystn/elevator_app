@@ -1,0 +1,12 @@
+<% require 'active_support/all' %>
+<% data.index.iteration_1.each{|variable, value| instance_variable_set("@base_#{variable}", value)} %>
+
+<div class="welcome">
+  <div class="logo">
+    <%=@base_title%>
+  </div>
+  <h1>Middleman is Running</h1>
+  <p class="doc">
+    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
+  </p><!-- .doc -->
+</div><!-- .welcome -->

@@ -1,0 +1,43 @@
+/* Feature location promos */
+
+.feature-locations {
+	margin-bottom: 30px;
+	label {
+		@include font-size(1.6);
+		width: 100%;
+		padding: 5px;
+		margin-bottom: 0;
+		font-weight: normal;
+		span {
+			display: inline-block;
+		}
+		&.active {
+			background-color: $secondary-color;
+		}
+	}
+	.feature-floor {
+		font-weight: 700;
+		padding-right: 5px;
+	}
+	button {
+		display: block;
+		padding: 0;
+		border: 2px solid transparent;
+		&.active {
+			border-color: $white;
+		}
+	}
+}
+
+/* Media Queries */
+
+// Iteration 2
+// iPad landscape
+@media only screen and (min-width: 780px) {
+	.feature-locations {
+		margin-bottom: 0;
+		button {
+			margin-bottom: 30px;
+		}
+	}
+}

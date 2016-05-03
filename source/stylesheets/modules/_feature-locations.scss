@@ -14,6 +14,12 @@
 		&.active {
 			background-color: $secondary-color;
 		}
+		&.feature-floor-restaurant {
+			@extend .josefin;
+			font-weight: 700;
+			@include font-size(1.8);
+
+		}
 	}
 	.feature-floor {
 		font-weight: 700;

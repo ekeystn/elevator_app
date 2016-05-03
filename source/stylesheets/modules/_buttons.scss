@@ -52,3 +52,26 @@ button, label {
 		margin: 0 40px;
 	}
 }
+
+// Iteration 2
+// iPad landscape
+@media only screen and (min-width: 780px) {
+	.floor-entry {
+		padding: 0 5%;
+		button {
+			height: 85px;
+			width: 85px;
+		}
+	}
+	.util-btns {
+		@include make-row;
+		li {
+			@include make-md-column(4);
+		}
+		button {
+			height: 75px;
+			width: 75px;
+		}
+
+	}
+}

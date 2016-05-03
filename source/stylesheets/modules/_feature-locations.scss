@@ -28,3 +28,16 @@
 		}
 	}
 }
+
+/* Media Queries */
+
+// Iteration 2
+// iPad landscape
+@media only screen and (min-width: 780px) {
+	.feature-locations {
+		margin-bottom: 0;
+		button {
+			margin-bottom: 30px;
+		}
+	}
+}

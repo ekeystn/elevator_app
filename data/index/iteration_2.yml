@@ -11,11 +11,11 @@ floor_entry_label: 'Choose a floor'
 feature_btns:
 - floor: "1"
   message: "Eat. Drink. Lounge. Lenox."
-  image: "http://placehold.it/375x150?text=Restaurant+Placeholder"
+  image: "images/lenox.jpg"
   id: "restaurant"
 - floor: "2"
   message: "Workout On Your Terms 24/7."
-  image: "http://placehold.it/375x150?text=Gym+Placeholder"
+  image: "images/gym.jpg"
   id: "gym"
 
 # Floor entry buttons

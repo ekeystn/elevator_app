@@ -28,9 +28,10 @@
 	button {
 		display: block;
 		padding: 0;
-		border: 2px solid transparent;
+		border: 0;
+		box-shadow: 1px 1px 8px rgba(0,0,0,0.8);
 		&.active {
-			border-color: $white;
+			box-shadow: 2px 2px 8px rgba(255,255,255,0.8)
 		}
 	}
 }

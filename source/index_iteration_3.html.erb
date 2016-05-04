@@ -1,6 +1,6 @@
 <% require 'active_support/all' %>
 <!-- Set data file path and variable -->
-<% data.index.iteration_2.each{|variable, value| instance_variable_set("@base_#{variable}", value)} %>
+<% data.index.iteration_3.each{|variable, value| instance_variable_set("@base_#{variable}", value)} %>
 
 <div class="container">
 	<h1>
@@ -23,7 +23,7 @@
 		<!-- Featured locations -->
 		<div class="col-xs-12 col-md-5">
 			<ul class="row feature-locations list-unstyled" id="feature-locations">
-				<% data.index.iteration_2.feature_btns.each do |f| %>
+				<% data.index.iteration_3.feature_btns.each do |f| %>
 					<li class="col-xs-6 col-md-12">
 						<label class="feature-floor-<%= f["id"] %>">
 							<span class="feature-floor">Floor <%= f["floor"] %>:</span>
@@ -40,7 +40,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="list-unstyled util-btns" id="util-btns">
-						<% data.index.iteration_2.util_btns.each do |f| %>
+						<% data.index.iteration_3.util_btns.each do |f| %>
 							<li>
 								<button id="entry-<%= f["id"] %>" class="util <%= f["class"] %>" value="<%= f["id"] %>">
 									<%= f["text"] %>

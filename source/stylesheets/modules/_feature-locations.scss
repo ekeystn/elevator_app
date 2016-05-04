@@ -30,8 +30,28 @@
 		padding: 0;
 		border: 0;
 		box-shadow: 1px 1px 8px rgba(0,0,0,0.8);
+		@include font-size(3);
 		&.active {
 			box-shadow: 2px 2px 8px rgba(255,255,255,0.8)
+		}
+	}
+}
+
+
+/* Media Queries */
+// iPad landscape
+@media only screen and (min-width: 780px) {
+	.feature-locations {
+		margin-bottom: 30px;
+		button {
+			margin-bottom: 30px;
+		}
+		label, label.feature-floor-restaurant {
+			@include font-size(3.0);
+			margin: 20px 0;
+			span {
+				display: inline;
+			}
 		}
 	}
 }
